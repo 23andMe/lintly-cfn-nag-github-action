@@ -1,0 +1,31 @@
+name: Lintly-cfn-nag
+author: Patrick Kelley
+description: Lint CloudFormation with cfn-nag and create Pull Request reviews with linting violations.
+
+inputs:
+  token:
+    description: The GitHub API token to use for creating PR reviews
+    required: true
+  failIf:
+    description: Fail if *any* violations are detected or only *new* ones (valid values are "new" or "any")
+    required: false
+    default: new
+  templatePath:
+    description: Path to CloudFormation templates
+    required: true
+  excludeRules:
+    description: Path to YML file with rules to ignore
+    required: false
+    default: "cfn_nag_exclude.yml"
+  args:
+    description: Args to pass to the cfn-nag executable
+    required: false
+    default: ""
+
+runs:
+  using: docker
+  image: Dockerfile
+
+branding:
+  icon: code
+  color: gray-dark

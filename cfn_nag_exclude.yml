@@ -1,0 +1,9 @@
+---
+# Run `cfn_nag_rules` to see the full list of supported rules
+RulesToSuppress:
+- id: F1000
+  reason: Missing egress rules are not a misconfiguration. This should have been a warning and not an error.
+- id: W28
+  reason: Explicit names of SGs are OK.
+- id: W36
+  reason: We use descriptive names, see W28.
