@@ -7,3 +7,5 @@ RulesToSuppress:
   reason: Explicit names of SGs are OK.
 - id: W36
   reason: We use descriptive names, see W28.
+- id: W60
+  reason: We do not care VPC flow logs.

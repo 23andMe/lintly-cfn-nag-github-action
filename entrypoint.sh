@@ -4,12 +4,11 @@ args="."
 if [[ $# -ne 0 ]]; then
     args="$@"
 fi
+echo "Hello echoing INPUT_EXCLUDE_RULES"
+echo ${INPUT_EXCLUDERULES}
 
-cfn_nag_scan \
-    ${args} \
-    --input-path=${INPUT_TEMPLATEPATH} \
-    --blacklist-path=${INPUT_EXCLUDE_RULES} \
-    --output-format=json \
-    | lintly --api-key $INPUT_TOKEN \
+ls -la /
+
+cfn_nag_scan --input-path ${INPUT_TEMPLATEPATH} --blacklist-path=${INPUT_EXCLUDERULES} --output-format=json | lintly --api-key $INPUT_TOKEN \
         --fail-on $INPUT_FAILIF \
-        --log --no-post-status --format=cfn-nag
+       --log --no-post-status --format=cfn-nag
