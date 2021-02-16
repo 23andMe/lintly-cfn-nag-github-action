@@ -16,7 +16,7 @@ inputs:
   excludeRules:
     description: Path to YML file with rules to ignore
     required: false
-    default: "cfn_nag_exclude.yml"
+    default: "/cfn_nag_exclude.yml"
   args:
     description: Args to pass to the cfn-nag executable
     required: false
