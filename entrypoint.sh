@@ -7,7 +7,7 @@ fi
 echo "Hello echoing INPUT_EXCLUDE_RULES"
 echo ${INPUT_EXCLUDERULES}
 
-echo "Hello printing INPUT_FAILIF
+echo "Hello printing INPUT_FAILIF"
 echo ${INPUT_FAILIF}
 
 echo "printing INPUT_TOKEN"
