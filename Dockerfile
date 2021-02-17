@@ -12,7 +12,7 @@ LABEL "maintainer"="Patrick Kelley <patrickk@23andme.com>"
 RUN apt-get update \
     && apt-get -y install python3 python3-pip ruby ruby-dev \ 
     && python3 -m pip install --upgrade pip \
-    && python3 -m pip install lintly \
+    && python3 -m pip install ttam-lintly \
     && gem install cfn-nag --no-format-exec \
     && rm -rf /var/lib/apt/lists/*
 
