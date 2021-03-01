@@ -5,8 +5,8 @@ LABEL "com.github.actions.description"="Runs cfn-nag and uses lintly to provide 
 LABEL "com.github.actions.icon"="code"
 LABEL "com.github.actions.color"="gray-dark"
 
-LABEL "repository"="https://github.com/23andme-private/security-cfn-nag-lintly-action.git"
-LABEL "homepage"="https://github.com/23andme-private/security-cfn-nag-lintly-action"
+LABEL "repository"="https://github.com/23andMe/lintly-cfn-nag-github-action.git"
+LABEL "homepage"="https://github.com/23andMe/lintly-cfn-nag-github-action"
 LABEL "maintainer"="Patrick Kelley <patrickk@23andme.com>"
 
 RUN apt-get update \
